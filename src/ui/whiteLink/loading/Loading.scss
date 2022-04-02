@@ -1,0 +1,35 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/mixins.scss';
+
+.loading {
+    max-width: 500px;
+    width: 100%;
+    padding: 0 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &__road {
+        width: 100%;
+        padding: 5px;
+        overflow: hidden;
+        background: $grey;
+        @include win-style
+        
+    }
+    &__runner {
+        width: 25%;
+        height: 30px;
+        background: $main-blue;
+        animation: load 3s linear 1s infinite running;
+    }
+}
+
+@keyframes load {
+    0% {
+        transform: translateX(-150px);
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
