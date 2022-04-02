@@ -1,0 +1,17 @@
+@import '../../../styles/vars.scss';
+@import '../../../styles/mixins.scss';
+
+.header {
+    width: 100%;
+    background: $main-blue;
+    padding: 15px 0;
+    &__container { @include flex-between }
+    .nav {
+        max-width: 500px;
+        width: 100%;
+        ul {
+            width: 100%;
+            @include flex-between
+        }
+    }
+}

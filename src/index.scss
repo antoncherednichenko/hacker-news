@@ -1,0 +1,28 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100vw;
+	height: 100vh;
+	font-family: 'Heebo', sans-serif;
+	font-size: 14px;
+	color: #000;
+}
+
+ul, ol {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+}
+img {
+	display: block;
+}
+.container {
+	max-width: 1440px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
