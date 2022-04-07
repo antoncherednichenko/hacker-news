@@ -8,7 +8,7 @@ const Logo: React.FC = () => {
         <Link to={'/'} className="logo">
             <span>Hacker</span>
             <br />
-            <span>News</span>
+            <span className="logo__second-word">News</span>
         </Link>
     )
 }

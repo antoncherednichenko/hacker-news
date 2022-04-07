@@ -1,52 +1,49 @@
-export const SET_NEWS = 'SET_NEWS'
-export const TOGGLE_LOADING_STATE = 'TOGGLE_LOADING_STATE'  
 
-export type numArr = Array<number>
+export const SET_NEWS = 'SET_NEWS'
+export const TOGGLE_LOADING_STATE = 'TOGGLE_LOADING_STATE' 
+
+type numberArray = Array<number>
 
 export interface INew {
     by: string,
     descendants: number,
-    id: number,
-    kids: numArr,
+    kids: numberArray,
     score: number,
     time: number,
     title: string,
     type: string,
     url: string
-
 }
-export type TNewsArr = Array<INew>
 
-export interface INews {
-    newsArr: TNewsArr,
+export type newsListType = Array<INew>
+
+export interface newsState {
+    newsList: newsListType,
     isNewsLoading: boolean
 }
 
-export type newsPayload =   boolean | TNewsArr 
+export type newsPayloadType = boolean | newsListType
 
 export interface INewsAction {
     type: string,
-    payload: newsPayload,
+    payload: newsPayloadType
 }
 
-const initialState: INews = {
-    newsArr: [],
+const initialState: newsState = {
+    newsList: [],
     isNewsLoading: true
 }
 
-
-const newsReducer = (state: INews = initialState, action: INewsAction): INews => {
+const newsReducer = (state = initialState, action: INewsAction): newsState => {
     switch(action.type) {
         case SET_NEWS:
-            //@ts-ignore
-            return { ...state, newsArr: action.payload }
+            return { ...state,  newsList: action.payload}
         case TOGGLE_LOADING_STATE:
-            //@ts-ignore
             return { ...state, isNewsLoading: action.payload }
-        default:
-            return state
-        
-    }  
+        default: return state
+    }
 }
+
+
 
 export default newsReducer
