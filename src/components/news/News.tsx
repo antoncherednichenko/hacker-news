@@ -12,17 +12,17 @@ const News: React.FC<INewsProps> = ({ newsList }) => {
 
     return (
         <>
-        <ul className="news">
-            { newsList.map(e => (
-                <NewsItem
-                    autor={e.by}
-                    score={e.score}
-                    date={e.time}
-                    title={e.title}
-                    url={e.url} 
-                />
-            )) }
-        </ul>
+            <ul className="news">
+                { newsList.map(e => (
+                    <NewsItem
+                        autor={e.by}
+                        score={e.score}
+                        date={e.time}
+                        title={e.title}
+                        url={e.url} 
+                    />
+                )) }
+            </ul>
         </>
     )
 }

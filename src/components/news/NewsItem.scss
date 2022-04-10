@@ -1,8 +1,9 @@
 @import '../../styles/vars.scss';
 @import '../../styles/mixins.scss';
 
-.news {
+.item {
+    max-width: 500px;
     width: 100%;
-    @include flex-column(15px);
-    @include flex-center;
+    background: $light-grey;
+    @include win-style;
 }

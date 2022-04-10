@@ -6,6 +6,18 @@
     justify-content: space-between;
 }
 
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-column($gap) {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+
 @mixin win-style {
     box-shadow: inset -1px -1px $dark-grey, inset 1px 1px $light-grey, inset -2px -2px $dark-grey, inset 2px 2px $light-grey;
     border: 1px solid #000;

@@ -1,0 +1,1 @@
+export const dateParser = (date: number): string => new Date(date).toLocaleDateString('ru')

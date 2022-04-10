@@ -1,3 +1,4 @@
+import { typeNewsAction, typeLoadingNewsAction } from "../actionCreators/actionCreators"
 
 export const SET_NEWS = 'SET_NEWS'
 export const TOGGLE_LOADING_STATE = 'TOGGLE_LOADING_STATE' 
@@ -15,26 +16,21 @@ export interface INew {
     url: string
 }
 
-export type newsListType = Array<INew>
+export type newsListType = INew[]
 
 export interface newsState {
     newsList: newsListType,
     isNewsLoading: boolean
 }
 
-export type newsPayloadType = boolean | newsListType
-
-export interface INewsAction {
-    type: string,
-    payload: newsPayloadType
-}
+export type newsActionType = typeNewsAction | typeLoadingNewsAction
 
 const initialState: newsState = {
     newsList: [],
     isNewsLoading: true
 }
 
-const newsReducer = (state = initialState, action: INewsAction): newsState => {
+const newsReducer = (state = initialState, action: newsActionType): newsState => {
     switch(action.type) {
         case SET_NEWS:
             return { ...state,  newsList: action.payload}
