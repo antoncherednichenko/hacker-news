@@ -14,7 +14,7 @@ export const fetchHacherNews = ():ThunkAction<Promise<void>, RootState, unknown,
         const newsList: newsListType = newsID.map(e => e.data)
         dispatch(loadingNewsAction(false))
         dispatch(setNewsAction(newsList))
-        console.log(newsList)
+        
         console.log(getState(), 'STATE')
     }
 }

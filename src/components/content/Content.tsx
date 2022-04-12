@@ -12,8 +12,7 @@ const Content: React.FC = () => {
     const [isLoading, setIsLoading] = useState(useTypeSelector(state => state.news.isNewsLoading))
     const [newsList, setNewsList] = useState(useTypeSelector(state => state.news.newsList.slice(0, 100)))
     const [state, setState] = useState(useTypeSelector(state => state))
-    useEffect(() => { dispatch(fetchHacherNews) } , [])
-    console.log(useTypeSelector(state => state))
+    useEffect( () => { dispatch(fetchHacherNews) } , [])
 
 
 
