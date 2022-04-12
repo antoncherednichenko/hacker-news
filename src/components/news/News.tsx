@@ -9,7 +9,6 @@ interface INewsProps {
 }
 
 const News: React.FC<INewsProps> = ({ newsList }) => {
-
     return (
         <>
             <ul className="news">

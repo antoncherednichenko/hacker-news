@@ -12,11 +12,11 @@ interface IProps {
 }
 
 const NewsItem: React.FC<IProps> = ({ autor, score, date, title, url }) => {
-    console.log(autor)
+    console.log(autor, score, date, title, url)
     return (
         <>
             <li className="item">
-                <WhiteLink path={url}>
+                <WhiteLink path={url ? url : '/'}>
                     { title }
                 </WhiteLink>
                 <div className="item__autor">
