@@ -8,8 +8,10 @@ const Main: React.FC = () => {
     return (
         <>
             <div className="main">
+                <div className="main__container">
+                {/* <Content /> */}
+                </div>
                 <Header />
-                <Content />
             </div>
         </>
     )

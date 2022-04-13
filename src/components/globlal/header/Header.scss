@@ -2,16 +2,14 @@
 @import '../../../styles/mixins.scss';
 
 .header {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    background: $main-blue;
-    padding: 15px 0;
-    &__container { @include flex-between }
-    .nav {
-        max-width: 500px;
-        width: 100%;
-        ul {
-            width: 100%;
-            @include flex-between
-        }
+    background: $light-grey;
+    padding: 10px 0;
+    box-shadow: inset 0px 5px rgb(248, 239, 239);
+    .flex {
+        @include flex-between;
+        align-items: center;
     }
 }

@@ -1,0 +1,21 @@
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/vars.scss';
+
+.pusk {
+    max-width: 130px;
+    width: 100%;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 18px;
+    background: $light-grey;
+    border: none;
+    align-items: center;
+    box-shadow: inset 2px 3px rgb(248 239 239), inset -2px -2px #585c5f, 3px 5px 7px -4px rgb(80 80 81 / 80%);
+    @include flex-between;
+    &:active {
+        box-shadow: inset 2px 3px $win-white, inset -2px -2px $dark-grey;
+    }
+    img {
+        width: 30px;
+    }
+}

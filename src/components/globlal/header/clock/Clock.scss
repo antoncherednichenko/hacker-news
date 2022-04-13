@@ -1,0 +1,9 @@
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/vars.scss';
+
+.clock {
+    width: 115px;
+    padding: 5px 10px;
+    box-shadow: inset 2px 2px #585c5f, inset -1px -2px rgb(248 239 239);
+    @include flex-center;
+}

@@ -16,15 +16,14 @@ const NewsItem: React.FC<IProps> = ({ autor, score, date, title, url }) => {
     return (
         <>
             <li className="item">
-                <WhiteLink path={url ? url : '/'}>
-                    { title }
-                </WhiteLink>
+                <a href={url} target="_blank">{ title }</a>
                 <div className="item__autor">
                     <span>Author: { autor }</span>
                 </div>
                 <div className="item__info">
                     <span>{score}</span>
-                    <span>{date}</span>
+                    <br />
+                    <span>{dateParser(date)}</span>
                 </div>
             </li>
         </>

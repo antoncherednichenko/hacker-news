@@ -18,6 +18,12 @@
     gap: $gap;
 }
 
+@mixin flex-wrap($gap) {
+    @include flex-between();
+    flex-wrap: wrap;
+    gap: $gap;
+}
+
 @mixin win-style {
     box-shadow: inset -1px -1px $dark-grey, inset 1px 1px $light-grey, inset -2px -2px $dark-grey, inset 2px 2px $light-grey;
     border: 1px solid #000;

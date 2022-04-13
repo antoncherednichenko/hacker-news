@@ -3,6 +3,7 @@
 
 .news {
     width: 100%;
-    @include flex-column(15px);
+    padding-top: 50px;
+    @include flex-wrap(15px);
     @include flex-center;
 }

@@ -2,8 +2,9 @@
 @import '../../styles/mixins.scss';
 
 .item {
-    max-width: 500px;
+    max-width: 33%;
     width: 100%;
     background: $light-grey;
+    padding: 15px 10px; 
     @include win-style;
 }
