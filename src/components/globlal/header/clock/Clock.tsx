@@ -9,8 +9,7 @@ const Clock: React.FC = () => {
         setTime(now.toLocaleTimeString())
     }
 
-    useEffect(getNow, [])
-    setInterval(getNow, 1000)
+    useEffect(() => { setInterval(getNow, 1000) }, [])
 
     return (
         <>

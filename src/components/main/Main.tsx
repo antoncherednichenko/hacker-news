@@ -1,6 +1,7 @@
 import React from "react";
-import Content from "../content/Content";
 import Header from "../globlal/header/Header";
+import Descktop from "../descktop/Descktop";
+
 import './Main.scss'
 
 const Main: React.FC = () => {
@@ -9,7 +10,7 @@ const Main: React.FC = () => {
         <>
             <div className="main">
                 <div className="main__container">
-                {/* <Content /> */}
+                    <Descktop />
                 </div>
                 <Header />
             </div>

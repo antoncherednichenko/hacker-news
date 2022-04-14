@@ -7,7 +7,7 @@ const PuskButton: React.FC = () => {
         <>
         <button className="pusk">
             <img src={require('../../../../assets/windows.png')} alt="windows logo" />
-            <span>Reload</span>
+            <span>Пуск</span>
         </button>
         </>
     )

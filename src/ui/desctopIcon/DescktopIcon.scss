@@ -1,0 +1,18 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/vars.scss';
+
+.icon {
+    max-width: 100px;
+    cursor: pointer;
+    &:not(:last-child) { margin-bottom: 25px; }
+    img {
+        width: 50px;
+        margin: 0 auto;
+    }
+    figcaption {
+        font-size: 18px;
+        text-align: center;
+        line-height: 15px;
+        padding-top: 5px;
+    }
+}
