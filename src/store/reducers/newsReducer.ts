@@ -13,7 +13,8 @@ export interface INew {
     time: number,
     title: string,
     type: string,
-    url: string
+    url: string,
+    id: number
 }
 
 export type newsListType = INew[]

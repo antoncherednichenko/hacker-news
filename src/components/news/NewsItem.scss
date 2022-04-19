@@ -2,9 +2,19 @@
 @import '../../styles/mixins.scss';
 
 .item {
-    max-width: 33%;
     width: 100%;
     background: $light-grey;
     padding: 15px 10px; 
     @include win-style;
+    @include flex-column(5px);
+    &__autor, &__info { font-size: 22px; }
+    a {
+        font-family: 'Press Start 2P', cursive;
+        font-size: 20px;
+        color: $main-blue;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .underline { text-decoration: underline; }
 }

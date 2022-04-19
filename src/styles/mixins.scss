@@ -24,7 +24,16 @@
     gap: $gap;
 }
 
+@mixin align-center {
+    display: flex;
+    align-items: center;
+}
+
 @mixin win-style {
     box-shadow: inset -1px -1px $dark-grey, inset 1px 1px $light-grey, inset -2px -2px $dark-grey, inset 2px 2px $light-grey;
     border: 1px solid #000;
+}
+
+@mixin win-btn {
+    box-shadow: inset 2px 3px rgb(248 239 239), inset -2px -2px #585c5f, 3px 5px 7px -4px rgb(80 80 81 / 80%);
 }

@@ -1,7 +1,6 @@
 import React from "react";
 import './NewsItem.scss'
 import { dateParser } from '../../helpers/helpers'
-import WhiteLink from "../../ui/whiteLink/WhiteLink";
 
 interface IProps {
     autor: string,
@@ -12,16 +11,16 @@ interface IProps {
 }
 
 const NewsItem: React.FC<IProps> = ({ autor, score, date, title, url }) => {
-    console.log(autor, score, date, title, url)
     return (
         <>
             <li className="item">
                 <a href={url} target="_blank">{ title }</a>
                 <div className="item__autor">
-                    <span>Author: { autor }</span>
+                    <span className="underline">Author:</span>
+                    <span> { autor }</span> 
                 </div>
                 <div className="item__info">
-                    <span>{score}</span>
+                    <span className="underline">Rating:</span><span> { score }</span>
                     <br />
                     <span>{dateParser(date)}</span>
                 </div>

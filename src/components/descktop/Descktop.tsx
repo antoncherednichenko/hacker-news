@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import './Descktop.scss'
 import DescktopIcon from "../../ui/desctopIcon/DesctopIcon";
+import Modal from "../../ui/modal/Modal";
+import News from "../news/News";
 
 const Descktop: React.FC = () => {
+    const [isModal, setIsModal] = useState(false)
+    const closeModal = () => { setIsModal(false) }
+    const openModal = () => { setIsModal(true) }
 
     return (
         <>
@@ -29,11 +34,13 @@ const Descktop: React.FC = () => {
                         url="./icons/internet-explorer.png"
                     />
                     <DescktopIcon
+                        clickHandle={openModal}
                         alt="news icon"
                         description="Hacker News"
                         url="./icons/news.png"
                     />
                 </div>
+                { isModal && <Modal children={<News />} closeHandle={closeModal} title="Hacker news" /> }
             </div>
         </>
     )
